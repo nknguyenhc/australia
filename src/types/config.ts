@@ -71,10 +71,8 @@ export type BlogPostData = {
 	title: string;
 	published: Date;
 	description: string;
-	tags: string[];
 	draft?: boolean;
 	image?: string;
-	category?: string;
 	prevTitle?: string;
 	prevSlug?: string;
 	nextTitle?: string;

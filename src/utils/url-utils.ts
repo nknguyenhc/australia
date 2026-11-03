@@ -13,21 +13,6 @@ export function getPostUrlBySlug(slug: string): string {
 	return url(`/posts/${slug}/`);
 }
 
-export function getTagUrl(tag: string): string {
-	if (!tag) return url("/archive/");
-	return url(`/archive/?tag=${encodeURIComponent(tag.trim())}`);
-}
-
-export function getCategoryUrl(category: string | null): string {
-	if (
-		!category ||
-		category.trim() === "" ||
-		category.trim().toLowerCase() === "uncategorized"
-	)
-		return url("/archive/?uncategorized=true");
-	return url(`/archive/?category=${encodeURIComponent(category.trim())}`);
-}
-
 export function getDir(path: string): string {
 	const lastSlashIndex = path.lastIndexOf("/");
 	if (lastSlashIndex < 0) {
