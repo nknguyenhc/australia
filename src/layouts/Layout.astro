@@ -37,6 +37,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, url("/"));
 // defines global css variables
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
 const configHue = siteConfig.themeColor.hue;
+const configHueFixed = siteConfig.themeColor.fixed;
 if (!banner || typeof banner !== "string" || banner.trim() === "") {
   banner = siteConfig.banner.src;
 }
@@ -121,6 +122,7 @@ const bannerOffset =
         BANNER_HEIGHT_EXTEND,
         PAGE_WIDTH,
         configHue,
+        configHueFixed,
       }}
     >
       // Load the theme from local storage
@@ -140,8 +142,10 @@ const bannerOffset =
           }
       }
 
-      // Load the hue from local storage
-      const hue = localStorage.getItem("hue") || configHue;
+      // Use the configured hue when fixed; otherwise restore the visitor's preference
+      const hue = configHueFixed
+        ? configHue
+        : localStorage.getItem("hue") || configHue;
       document.documentElement.style.setProperty("--hue", hue);
 
       // calculate the --banner-height-extend, which needs to be a multiple of 4 to avoid blurry text

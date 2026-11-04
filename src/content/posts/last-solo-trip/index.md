@@ -7,7 +7,7 @@ image: ./cover.jpg
 
 I went to Japan earlier this year! It was from 17 May 2026 to 11 June 2026. What an adventure of my life! I created a website for my Japan travel, here is the [link](https://japan.nknguyenhc.net/)
 
-And so I thought, since this time I am going Australia again, why not creating a website for me to store my precious memory 😄
+And so I thought, since this time I am going solo again, why not creating a website for me to store my precious memory 😄
 
 ## Hiroshima
 
