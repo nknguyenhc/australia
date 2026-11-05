@@ -1,5 +1,5 @@
 ---
-title: Last Solo Trip
+title: My Last Solo Trip
 published: 2026-04-11
 description: My last solo trip to Japan
 image: ./cover.jpg
