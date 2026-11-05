@@ -29,11 +29,16 @@
           "type": "string"
         },
         {
-          "title": "published",
-          "name": "published",
+          "title": "start date",
+          "name": "startDate",
           "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
+          "default": "{{now}}"
+        },
+        {
+          "title": "end date",
+          "name": "endDate",
+          "type": "datetime",
+          "default": "{{now}}"
         },
         {
           "title": "preview",

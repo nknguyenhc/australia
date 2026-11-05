@@ -9,7 +9,8 @@ interface Post {
 	slug: string;
 	data: {
 		title: string;
-		published: Date;
+		startDate: Date;
+		endDate: Date;
 	};
 }
 
@@ -20,16 +21,21 @@ interface Group {
 
 let groups: Group[] = [];
 
-function formatDate(date: Date) {
+function formatDate(date: Date, includeYear = false) {
 	const month = (date.getMonth() + 1).toString().padStart(2, "0");
 	const day = date.getDate().toString().padStart(2, "0");
-	return `${month}-${day}`;
+	return includeYear ? `${month}-${day}-${date.getFullYear()}` : `${month}-${day}`;
+}
+
+function formatDateRange(startDate: Date, endDate: Date) {
+	const endIncludesYear = startDate.getFullYear() !== endDate.getFullYear();
+	return `${formatDate(startDate)} - ${formatDate(endDate, endIncludesYear)}`;
 }
 
 onMount(async () => {
 	const grouped = sortedPosts.reduce(
 		(acc, post) => {
-			const year = post.data.published.getFullYear();
+			const year = post.data.startDate.getFullYear();
 			if (!acc[year]) {
 				acc[year] = [];
 			}
@@ -54,16 +60,16 @@ onMount(async () => {
     {#each groups as group}
         <div>
             <div class="flex flex-row w-full items-center h-[3.75rem]">
-                <div class="w-[15%] md:w-[10%] transition text-2xl font-bold text-right text-75">
+                <div class="w-[35%] md:w-[25%] transition text-2xl font-bold text-right text-75">
                     {group.year}
                 </div>
-                <div class="w-[15%] md:w-[10%]">
+                <div class="w-[10%] md:w-[8%]">
                     <div
                             class="h-3 w-3 bg-none rounded-full outline outline-[var(--primary)] mx-auto
                   -outline-offset-[2px] z-50 outline-3"
                     ></div>
                 </div>
-                <div class="w-[70%] md:w-[80%] transition text-left text-50">
+                <div class="w-[55%] md:w-[67%] transition text-left text-50">
                     {group.posts.length} {group.posts.length === 1 ? "post" : "posts"}
                 </div>
             </div>
@@ -76,12 +82,12 @@ onMount(async () => {
                 >
                     <div class="flex flex-row justify-start items-center h-full">
                         <!-- date -->
-                        <div class="w-[15%] md:w-[10%] transition text-sm text-right text-50">
-                            {formatDate(post.data.published)}
+                        <div class="w-[35%] md:w-[25%] transition text-xs text-right text-50 whitespace-nowrap">
+                            {formatDateRange(post.data.startDate, post.data.endDate)}
                         </div>
 
                         <!-- dot and line -->
-                        <div class="w-[15%] md:w-[10%] relative dash-line h-full flex items-center">
+                        <div class="w-[10%] md:w-[8%] relative dash-line h-full flex items-center">
                             <div
                                     class="transition-all mx-auto w-1 h-1 rounded group-hover:h-5
                        bg-[oklch(0.5_0.05_var(--hue))] group-hover:bg-[var(--primary)]
@@ -94,7 +100,7 @@ onMount(async () => {
 
                         <!-- post title -->
                         <div
-                                class="w-[70%] md:w-[80%] text-left font-bold
+                                class="w-[55%] md:w-[67%] text-left font-bold
                      group-hover:translate-x-1 transition-all group-hover:text-[var(--primary)]
                      text-75 pr-8 whitespace-nowrap overflow-ellipsis overflow-hidden"
                         >

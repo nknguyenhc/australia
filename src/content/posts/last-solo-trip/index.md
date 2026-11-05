@@ -1,6 +1,7 @@
 ---
 title: Last Solo Trip
-published: 2026-11-04
+startDate: 2026-05-17
+endDate: 2026-06-11
 description: My last solo trip to Japan
 image: ./cover.jpg
 ---

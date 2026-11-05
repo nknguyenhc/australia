@@ -13,7 +13,8 @@ const interval = 50;
         <PostCard
                 entry={entry}
                 title={entry.data.title}
-                published={entry.data.published}
+                startDate={entry.data.startDate}
+                endDate={entry.data.endDate}
                 updated={entry.data.updated}
                 url={getPostUrlBySlug(entry.slug)}
                 image={entry.data.image}
