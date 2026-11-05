@@ -7,10 +7,6 @@ image: ./cover.jpg
 
 June 9, 2026 - June 10, 2026
 
-# Tokyo
-
----
-
 ## To Tokyo
 
 I took a flight from Kagoshima to Tokyo. I intended Tokyo to be a transit place only, but since there are quite a number of historical places to visit, I decided to stay here one day.
