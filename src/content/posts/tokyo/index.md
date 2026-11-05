@@ -1,7 +1,7 @@
 ---
 title: Tokyo
 published: 2026-11-05
-description: ""
+description: "Two days in Tokyo"
 image: ./cover.jpg
 ---
 
