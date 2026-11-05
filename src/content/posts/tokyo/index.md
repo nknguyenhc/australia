@@ -1,7 +1,7 @@
 ---
 title: Tokyo
 published: 2026-11-05
-description: 
+description: ""
 image: ./cover.jpg
 ---
 
