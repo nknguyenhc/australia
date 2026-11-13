@@ -1,11 +1,10 @@
 ---
 title: Melbourne
-published: 2026-11-13
+startDate: 2026-11-07
+endDate: 2026-11-11
 description: ""
 image: ./cover.jpg
 ---
-
-7 Nov 2026 - 11 Nov 2026
 
 ## Arrival
 
