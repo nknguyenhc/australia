@@ -1,11 +1,10 @@
 ---
 title: Sydney
-published: 2026-11-15
+startDate: 2026-11-11
+endDate: 2026-11-15
 description: ""
 image: ./cover.jpg
 ---
-
-11 Nov - 15 Nov
 
 # Day 1
 
