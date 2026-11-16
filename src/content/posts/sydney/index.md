@@ -2,6 +2,7 @@
 title: Sydney
 startDate: 2026-11-11
 endDate: 2026-11-15
+updated: 2026-11-16
 description: ""
 image: ./cover.jpg
 ---
