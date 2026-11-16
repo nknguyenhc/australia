@@ -2,7 +2,7 @@
 title: Sydney
 startDate: 2026-11-11
 endDate: 2026-11-15
-description: ""
+description: "Discovering Sydney by helicopter, whale-watching cruise and bike ride, with time at Manly and Bondi beaches, the city’s markets, and its harbour sights."
 image: ./cover.jpg
 ---
 
