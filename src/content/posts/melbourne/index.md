@@ -2,7 +2,7 @@
 title: Melbourne
 startDate: 2026-11-07
 endDate: 2026-11-11
-description: ""
+description: "Exploring Melbourne’s markets, churches and galleries, with a Puffing Billy and Phillip Island tour, cycling along the coast, and a visit to the Eureka Skydeck."
 image: ./cover.jpg
 ---
 
