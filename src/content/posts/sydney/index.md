@@ -160,7 +160,7 @@ Enjoying gelato with a very scenic backdrop. The ice cream is really nice!
 
 # Day 3
 
-St Patrick church
+## St Patrick church
 
 ![](./image27.jpg)
 
